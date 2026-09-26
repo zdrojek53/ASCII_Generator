@@ -8,7 +8,8 @@ class CharacterSetup:
 
     character_dict = {}
 
-    def get_characters(self):
+    # Checks pixel density of each character and orders them ascending
+    def get_characters(self) -> list:
         for character in self.CHARACTERS:
             new_image = Image.new('L', (20, 20))
             image_draw = ImageDraw.Draw(new_image)
